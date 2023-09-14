@@ -71,7 +71,7 @@ Replace the entrypoint script (located at `e2e/testapp/entrypoint.sh`) with the 
 [here](https://raw.githubusercontent.com/renaynay/protocolberg/main/entrypoint.sh).
 
 ```bash
-curl https://raw.githubusercontent.com/renaynay/protocolberg/main/entrypoint.sh > e2e/testapp/entrypoint.sh
+rm e2e/testapp/entrypoint.sh && curl https://raw.githubusercontent.com/renaynay/protocolberg/main/entrypoint.sh > e2e/testapp/entrypoint.sh
 ```
 
 _(might have to change perms)_
