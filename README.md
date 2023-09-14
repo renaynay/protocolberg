@@ -20,14 +20,12 @@ https://magefile.org/
 
 Clone the repo and build/install the binary
 
-_Note: if you are using MacOS, `make install` may not work_
+_Note: if you are using MacOS, `make install` may not work_, use `make go-install` instead
 
 ```bash
 git clone https://github.com/celestiaorg/celestia-node.git
 
-cd celestia-node
-
-git checkout protocolberg
+cd celestia-node && git checkout tags/v0.11.0-rc13
 
 make build && make install
 
@@ -40,13 +38,7 @@ Initialise the light node and copy its account address from the output
 celestia light init --p2p.network arabica
 ```
 
-Fund the account via:
-
-https://discord.com/channels/638338779505229824/1018935905991536710
-
-```bash
-$request <account address>
-```
+Fund the account via the [faucet](https://faucet.celestia-arabica-10.com).
 
 Run the light node
 
@@ -63,18 +55,8 @@ Clone Polaris
 ```bash
 cd $HOME
 git clone https://github.com/berachain/polaris.git
-cd polaris && git checkout rollkit
+cd polaris && git checkout rollkit_v0.11.0-rc13-celestia-node
 ```
-
-Replace the entrypoint script (located at `e2e/testapp/entrypoint.sh`) with the one located in this repo: 
-
-[here](https://raw.githubusercontent.com/renaynay/protocolberg/main/entrypoint.sh).
-
-```bash
-rm e2e/testapp/entrypoint.sh && curl https://raw.githubusercontent.com/renaynay/protocolberg/main/entrypoint.sh > e2e/testapp/entrypoint.sh
-```
-
-_(might have to change perms)_
 
 Start Polaris
 
