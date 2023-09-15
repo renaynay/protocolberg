@@ -83,3 +83,7 @@ cd $HOME/polaris && foundryup
 
 mage start
 ```
+
+### Optional: Interact with contracts on Polaris x Rollkit
+
+If time, follow the tutorial starting [here](https://rollkit.dev/pr-preview/pr-210/tutorials/polaris-evm#frontend) to interact with a smart contract running on top of the Polaris x Rollkit sequencer.
