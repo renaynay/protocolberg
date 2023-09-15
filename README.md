@@ -76,6 +76,10 @@ rm e2e/testapp/entrypoint.sh && curl https://raw.githubusercontent.com/renaynay/
 
 _(might have to change perms)_
 
+```bash
+chmod +x e2e/testapp/entrypoint.sh
+```
+
 Start Polaris
 
 ```bash
